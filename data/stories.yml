@@ -1,0 +1,150 @@
+version: "3.1"
+
+stories:
+
+- story: Greet and inquire about open positions
+  steps:
+  - intent: greet+position
+  - action: utter_utilities
+  - action: action_check_positions
+
+- story: Candidate asks about open positions
+  steps:
+  - intent: position
+    entities:
+      - role_type: technical
+  - action: utter_role
+  - action: action_check_positions
+
+- story: Candidate asks for application status
+  steps:
+  - intent: status
+  - action: action_check_status
+  - action: utter_check
+
+- story: Greet and ask for application status
+  steps:
+  - intent: greet+name+status
+    entities:
+      - PERSON: "Alice"
+  - action: utter_check
+  - action: action_check_status
+
+- story: Candidate provides their name
+  steps:
+  - intent: name
+    entities:
+      - PERSON: "John Doe"
+  - action: utter_name
+  - action: utter_utilities
+
+- story: Greet, provide name, and ask for application status
+  steps:
+  - intent: greet+name+status
+    entities:
+      - PERSON: "John Doe"
+  - action: utter_check
+  - action: action_check_status
+
+- story: Greet and confirm information
+  steps:
+  - intent: greet
+  - action: utter_simple_greet
+  - intent: affirm
+  - action: utter_knowmore
+
+- story: Thanking and saying goodbye
+  steps:
+  - intent: thanks
+  - action: utter_nothanks
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Greet and ask if the user needs more help
+  steps:
+  - intent: greet
+  - action: utter_simple_greet
+  - intent: thanks
+  - action: utter_knowmore
+
+- story: Greet and ask about role type
+  steps:
+  - intent: greet
+  - action: utter_simple_greet
+  - intent: position
+    entities:
+      - role_type: technical
+  - action: utter_role
+  - action: action_check_positions
+
+- story: interactive_story_1
+  steps:
+  - intent: status
+  - action: action_check_status
+  - slot_was_set:
+    - status: rejected
+  - action: utter_knowmore
+  - intent: position
+  - action: utter_role
+  - intent: position
+    entities:
+    - role_type: technical
+  - slot_was_set:
+    - role_type: technical
+  - action: action_check_positions
+  - slot_was_set:
+    - positions:
+      - machine learning engineer
+      - ML product success engineer
+  - intent: thanks
+  - intent: thanks
+  - action: utter_knowmore
+  - intent: thanks
+  - action: utter_nothanks
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: position
+    entities:
+    - role_type: any
+  - slot_was_set:
+    - role_type: any
+  - action: action_check_positions
+  - slot_was_set:
+    - positions:
+      - machine learning engineer
+      - ML product success engineer
+  - intent: thanks
+  - action: utter_nothanks
+  - intent: status
+  - action: action_check_status
+  - slot_was_set:
+    - status: interview
+  - action: utter_knowmore
+  - intent: deny
+  - action: utter_nothanks
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_simple_greet
+  - intent: position
+  - action: utter_role
+  - intent: position
+    entities:
+    - role_type: technical
+  - slot_was_set:
+    - role_type: technical
+  - action: action_check_positions
+  - action: action_check_positions
+  - slot_was_set:
+    - positions:
+      - machine learning engineer
+      - ML product success engineer
+  - intent: position
+  - action: utter_further_apply
+  - action: utter_knowmore
+  - intent: thanks
+  - action: utter_nothanks
+  - action: utter_goodbye

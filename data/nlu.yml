@@ -1,0 +1,181 @@
+version: "3.1"
+nlu:
+- intent: affirm
+  examples: |
+    - y
+    - Y
+    - ya
+    - yes
+    - yes sure
+    - absolutely
+    - for sure
+    - yes yes yes
+    - definitely
+    - yes, it did.
+- intent: deny
+  examples: |
+    - no
+    - never
+    - nope
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - n
+    - N
+- intent: thanks
+  examples: |
+    - Thanks
+    - Thank you
+    - Thank you so much
+    - Thanks bot
+    - Thanks for that
+    - cheers
+    - cheers bro
+    - ok thanks!
+    - perfect thank you
+    - thanks a bunch for everything
+    - thanks for the help
+    - thanks a lot
+    - amazing, thanks
+    - cool, thanks
+    - cool thank you
+    - ok
+    - no thanks
+- intent: goodbye
+  examples: |
+    - Bye
+    - Goodbye
+    - See you later
+    - Bye bot
+    - Goodbye friend
+    - bye
+    - bye for now
+    - catch you later
+    - gotta go
+    - See you
+    - goodnight
+    - have a nice day
+    - i'm off
+    - see you later alligator
+    - we'll speak soon
+    - end
+    - finish
+- intent: greet
+  examples: |
+    - Hi
+    - Hey
+    - Hi bot
+    - Hey bot
+    - Hello
+    - Good morning
+    - hi again
+    - hi folks
+    - hi Mister
+    - hi pal!
+    - hi there
+    - greetings
+    - hello everybody
+    - hello is anybody there
+    - hello robot
+    - who are you?
+    - what are you?
+    - what's up
+    - how do you do?
+    - hi, this is [jill](PERSON)
+    - hello, this is [steven](PERSON)
+    - hey, my name is [steven](PERSON)
+    - hola, this is [john](PERSON)
+    - hey, I am [Jack](PERSON)
+    - hello, [steven](PERSON) is my name
+    - hi
+- intent: position
+  examples: |
+    - I’d like to know which positions are open right now
+    - Can I know about open positions?
+    - Do you have [any](role_type) openings?
+    - Do you have [any](role_type) opportunities available?
+    - I would like to get a job with you
+    - do you have jobs
+    - I want to join your company
+    - A [technical](role_type) one
+    - A [business](role_type) one
+    - [technology](role_type)
+    - [tech](role_type)
+    - [management](role_type)
+    - Can I see some of the [business](role_type) roles?
+    - Can I see some of the [technical](role_type) roles?
+    - [anything](role_type) is fine
+    - I am open to [anything](role_type)
+    - available positions
+    - [technical](role_type)
+    - check positions for [any](role_type) role
+    - i want to check open positions
+    - [technical](role_type)
+    - i want to apply for ml product engineer
+- intent: greet+position
+  examples: |
+    - Hi, Can I know about open positions?
+    - Hey, Do you have any openings?
+    - Hi bot, do you have any vacancies
+    - Hey bot, I’d like to know which positions are open right now
+    - Hello, Can I know about open positions?
+    - hi again, I would like to get a job with you
+    - hi folks, Can I know about open positions?
+    - hi Mister, Do you have any openings?
+    - hi pal! tell me about open positions
+    - hi there, Can I know about open positions?
+    - greetings, do you have jobs
+    - hello everybody, I would like to get a job with you
+    - hello is anybody there, Can I know about open positions?
+- intent: status
+  examples: |
+    - I applied for a job and would like to know when I’ll hear back.
+    - I would like to know about my application status.
+    - What's the update on my status?
+    - Can I have an update on my application status?
+    - Where can I have an update on my application status?
+    - what's my application update?
+    - May I know what's my application update?
+    - I have not heard back on my application status.
+    - I haven't heard about my application.
+    - my application status
+    - application status
+- intent: name
+  examples: |
+    - My name is [sam](PERSON)
+    - My name is [sam paul](PERSON)
+    - I am [Paul](PERSON)
+    - I am [paul thomas](PERSON)
+    - My name is [George](PERSON)
+    - My name is [george xavier](PERSON)
+    - This is [Mary](PERSON)
+    - [George](PERSON)
+    - [george](PERSON)
+    - [Mary john](PERSON)
+    - [mary](PERSON)
+    - [jibin mathew](PERSON)
+- intent: greet+name+status
+  examples: |
+    - Hi, my name is [Ali Park](PERSON). I applied for a job and would like to know when I’ll hear back
+    - hello, I am [jibin](PERSON), update me on my application status
+    - Hi, my name is [mary](PERSON). I applied for a job and would like to know when I’ll hear back
+    - hello, I am [joseph](PERSON), update me on my application status
+    - hello, I am [Arya](PERSON), update me on my application status
+    - Hi, my name is [mathew](PERSON). I applied for a job and would like to know when I’ll hear back
+    - my name is [Darren](PERSON) and check application [status](status)
+    - my name is [Darren](PERSON) and check application status
+    - my name is [darren]{"entity": "PERSON", "value": "Darren"} and update me on my application status
+- synonym: Darren
+  examples: |
+    - darren
+- synonym: technical
+  examples: |
+    - tech
+    - technology
+- synonym: business
+  examples: |
+    - management
+- synonym: any
+  examples: |
+    - anything

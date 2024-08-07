@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-PERSON",
+      "2": "I-PERSON",
+      "3": "L-PERSON",
+      "4": "U-PERSON",
+      "5": "B-role_type",
+      "6": "I-role_type",
+      "7": "L-role_type",
+      "8": "U-role_type",
+      "9": "B-status",
+      "10": "I-status",
+      "11": "L-status",
+      "12": "U-status",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-PERSON": 1,
+      "I-PERSON": 2,
+      "L-PERSON": 3,
+      "U-PERSON": 4,
+      "B-role_type": 5,
+      "I-role_type": 6,
+      "L-role_type": 7,
+      "U-role_type": 8,
+      "B-status": 9,
+      "I-status": 10,
+      "L-status": 11,
+      "U-status": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]
