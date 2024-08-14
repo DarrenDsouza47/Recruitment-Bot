@@ -22,3 +22,4 @@ Rasa run
 Streamlit run streamlit_app.py
 ```
 ## Output
+![Capture#1](https://github.com/user-attachments/assets/27f8e1fb-4649-4d05-b574-867dc9674218)
