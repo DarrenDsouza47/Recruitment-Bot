@@ -1,5 +1,9 @@
 ## Rasa Chatbot for Open Positions and for checking application status
-Chatbot:
+
+
+- Build chatbot using rasa framework and adapted the stories of the chatbot accordingly for checking application status of a candidate and also open positions.
+
+Note:These Applications can be further enhanced based on specific requirements and use cases for providing better outputs. 
 
 open terminal:
 ```bash
