@@ -1,6 +1,9 @@
 ## Rasa Chatbot for Open Positions and for checking application status
 Chatbot:
 
+open terminal:
+enter:git clone https://github.com/DarrenDsouza47/Recruitment-Bot.git
+
 1)Install rasa 
 
 #Pip install rasa
